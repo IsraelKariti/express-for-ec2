@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 import { DataTypes } from "sequelize";
-console.log('11111');
 
 export const sequelize = new Sequelize(
     'first_db',
@@ -11,20 +10,27 @@ export const sequelize = new Sequelize(
         host: "database-4.cjmoksseckme.us-east-1.rds.amazonaws.com"
     }
 );
-console.log('2222222');
 
-export const Message = sequelize.define('message', {
+export const Computer = sequelize.define('computer', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    title: {
+    manufacturer: {
         type: DataTypes.STRING,
     },
-    body: {
+    model: {
         type: DataTypes.STRING
+    },
+    ram: {
+        type: DataTypes.INTEGER
+    },
+    disk: {
+        type: DataTypes.INTEGER
+    },
+    price: {
+        type: DataTypes.INTEGER
     }
 });
-console.log('33333333');
