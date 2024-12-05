@@ -21,7 +21,8 @@ app.get('/', async (req, res)=>{
 
 (async ()=>{
     await sequelize.sync();
-    app.listen(4000, ()=>{
-        console.log('server is linstening no port 4000');
+    const port = 8080;
+    app.listen(port, ()=>{
+        console.log('server is linstening no port '+port);
     });
 })()
