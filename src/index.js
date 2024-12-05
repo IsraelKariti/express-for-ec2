@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { Computer, sequelize } from './squelized.js';
+console.log('pipeline to ebs');
 
 const app = express();
 
